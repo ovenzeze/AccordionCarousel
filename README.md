@@ -1,4 +1,4 @@
-# AccordionCarousel（一个简单的手风琴轮播图库）
+# AccordionCarousel（一个简单的手风琴轮播组件）
 # 1：最终要实现的效果
 Github地址：[github.com/ovenzeze/AccordionCarousel](https://github.com/ovenzeze/AccordionCarousel)
 Demo地址：[http://urlc.cn/RCa7B2](http://123.206.204.163/AccordionCarousel/index.html)
@@ -39,13 +39,13 @@ var carousel1 = new AccordionCarousel({
 因为这种方式的轮播图每张图片的位置都不一样，所以无法使用将所有图片拼接为一张再通过控制left值的方式来达到轮播的效果。所以在这里我为每个图片的位置设置了定位，一共五个位置，每个位置根据不同的`class`类名来区分，通过动态的切换类名来达到轮播的效果。
 具体类名和位置如下：
 
- 
+
 在这里，为了达到有切换时图片从一个位置到另一个位置的切换效果，我一共使用了五个位置，在`img-list`的区域内有前一张图片（对应类名为`img-prev`），当前图片（对应类名为`img-current`），下一张图片（对应类名为`img-next`），而就绪状态的前一张图片（对应类名为`img-prev-ready`）和就绪状态的下一张图片（`img-next-ready`）。左右两侧的四张图片使用了`CSS3`中的`transform`属性，主要用到的是`perspective` `rotateY` `translateZ`三个属性，具体的使用大家可以参考MDN。
 参考资料：
 [MDN-transform属性](https://developer.mozilla.org/zh-CN/docs/Web/CSS/transform)
 [MDN-使用CSS3transform属性](https://developer.mozilla.org/zh-CN/docs/Web/CSS/CSS_Transforms/Using_CSS_transforms)
 ## 3.3：JS控制
-库文件的基本结构如下：
+文件的基本结构如下：
 ```
 function AccordionCarousel(event) {
     imgNumber = event.data.length;
