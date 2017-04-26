@@ -1,5 +1,5 @@
 # AccordionCarousel（一个简单的手风琴轮播组件）
-# 1：最终要实现的效果
+# 1：最终要实现的效果—（V2）
 Github地址：[github.com/ovenzeze/AccordionCarousel](https://github.com/ovenzeze/AccordionCarousel)
 Demo地址：[http://urlc.cn/RCa7B2](http://123.206.204.163/AccordionCarousel/index.html)
 # 2：使用方法
