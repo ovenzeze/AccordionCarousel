@@ -56,7 +56,7 @@ var carousel1 = new accordionCarousel({
 ## 3.3：JS控制
 文件的基本结构如下：
 ```
-function accordionCarousel(event) {
+function accordionCarousel(options) {
     this.imgNumber = options.data.length;
     this.indexPrevReady = 0;
     this.indexPrev = 1;
@@ -64,19 +64,19 @@ function accordionCarousel(event) {
     this.indexNext = 3;
     this.indexNextReady = 4;
     this.indexLastActived = 0;
-    this.wrap = options.wrap || $('body');
+    this.wrap = options.wrap || document.getElementByTagName("body");
     this.data = options.data;
     this.init(options.data);
     this.imgContainer;
     this.switchContainer; 
 }
 AccordionCarousel.prototype = {
-    constructor: AccordionCarousel,
+    constructor: accordionCarousel,
     //将constructor重新指向构造函数
     init: function(data) {
-    //初始化数据，插入DOM结构
+    //初始化数据，插入DOM片段
     this.bindEvent();
-    //初始状态时为指示器添加状态
+    //初始化DOM时为指示器添加状态
     this.switchActivedItemColor();
 },
     bindEvent:function(data){
