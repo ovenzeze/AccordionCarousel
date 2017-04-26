@@ -1,17 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="9d10a4b6-a5d0-4069-a6bf-9cd0d60e15fc" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/css/accordion-carousel.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/carousel-1.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/carousel-2.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/carousel-3.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/carousel-4.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/accordion-carousel.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/jquery.min.js" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
-    </list>
+    <list default="true" id="9d10a4b6-a5d0-4069-a6bf-9cd0d60e15fc" name="Default" comment="" />
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
     <ignored path="$PROJECT_DIR$/tmp/" />
@@ -71,7 +61,6 @@
   </component>
   <component name="ProjectFrameBounds">
     <option name="x" value="-11" />
-    <option name="y" value="-11" />
     <option name="width" value="1934" />
     <option name="height" value="1056" />
   </component>
@@ -235,12 +224,12 @@
       <updated>1493027277873</updated>
       <workItem from="1493027279219" duration="23481000" />
       <workItem from="1493181539246" duration="7570000" />
-      <workItem from="1493189368627" duration="1298000" />
+      <workItem from="1493189368627" duration="1894000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="32349000" />
+    <option name="totallyTimeSpent" value="32945000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -252,7 +241,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-11" y="-11" width="1934" height="1056" extended-state="0" />
+    <frame x="-11" y="0" width="1934" height="1056" extended-state="0" />
     <editor active="false" />
     <layout>
       <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1914226" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
