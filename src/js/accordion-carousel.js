@@ -13,38 +13,41 @@ function accordionCarousel(options) {
     this.init(options.data);
 }
 accordionCarousel.prototype = {
-    constructor: accordionCarousel,
-    init: function(data) {
-        let imgList = '',
-            imgItem = '',
-            switchBox = '',
-            imgNumber = data.length;
-        // splice DOM fragment
-        for (let i = 0; i < imgNumber; i++) {
-            switch (i) {
-                case 0:
-                    imgItem = '<div class="img-item prev-img-ready" position = "prevReady"><img src="' + data[i].img + '"></div>';
-                    break;
-                case 1:
-                    imgItem = '<div class="img-item prev-img" position = "prev"><img src="' + data[i].img + '"></div>';
-                    break;
-                case 2:
-                    imgItem = '<div class="img-item current-img" position = "current"><img src="' + data[i].img + '"></div>';
-                    break;
-                case 3:
-                    imgItem = '<div class="img-item next-img" position = "next"><img src="' + data[i].img + '"></div>';
-                    break;
-                case 4:
-                    imgItem = '<div class="img-item next-img-ready" position = "nextReady"><img src="' + data[i].img + '"></div>';
-                    break;
-                default:
-                    imgItem = '<div class="img-item other-img"><img src="' + data[i].img + '"></div>';
+        constructor: accordionCarousel,
+        init: function(data) {
+                var imgList = '',
+                    imgItem = '',
+                    switchBox = '',
+                    imgNumber = data.length;
+                // splice DOM fragment
+                for
+                var i = 0;
+                i < imgNumber;
+                i++) {
+                switch (i) {
+                    case 0:
+                        imgItem = '<div class="img-item prev-img-ready" position = "prevReady"><img src="' + data[i].img + '"></div>';
+                        break;
+                    case 1:
+                        imgItem = '<div class="img-item prev-img" position = "prev"><img src="' + data[i].img + '"></div>';
+                        break;
+                    case 2:
+                        imgItem = '<div class="img-item current-img" position = "current"><img src="' + data[i].img + '"></div>';
+                        break;
+                    case 3:
+                        imgItem = '<div class="img-item next-img" position = "next"><img src="' + data[i].img + '"></div>';
+                        break;
+                    case 4:
+                        imgItem = '<div class="img-item next-img-ready" position = "nextReady"><img src="' + data[i].img + '"></div>';
+                        break;
+                    default:
+                        imgItem = '<div class="img-item other-img"><img src="' + data[i].img + '"></div>';
+                }
+                imgList += imgItem;
             }
-            imgList += imgItem;
-        }
-        // splice navigation DOM fragment
-        for (let j = 0; j < imgNumber; j++) {
-            let switchItem = '<li class = "switch-item" index = "'+ j +'"></li>';
+            // splice navigation DOM fragment
+        for (var j = 0; j < imgNumber; j++) {
+            var switchItem = '<li class = "switch-item" index = "' + j + '"></li>';
             switchBox += switchItem;
         }
         // insert DOM fragment
@@ -57,23 +60,23 @@ accordionCarousel.prototype = {
         this.switchActivedItemColor();
     },
     bindEvent: function() {
-        let wrapper = document.getElementById("imgList");
-        let switchBox = document.getElementById("switchBox");
-        wrapper.addEventListener("click",this.switchByClick.bind(this));
-        switchBox.addEventListener("mouseover",this.switchByItem.bind(this));
+        var wrapper = document.getElementById("imgList");
+        var switchBox = document.getElementById("switchBox");
+        wrapper.addEventListener("click", this.switchByClick.bind(this));
+        switchBox.addEventListener("mouseover", this.switchByItem.bind(this));
     },
     switchByClick: function(event) {
-        let position = event.target.parentNode.getAttribute("position");
-        if(position === "current"){
+        var position = event.target.parentNode.getAttribute("position");
+        if (position === "current") {
             window.location = this.data[this.indexCurrent].url;
             return;
-        }else if(position === "next") {
+        } else if (position === "next") {
             this.indexPrevReady = this.indexPrevReady >= this.imgNumber - 1 ? 0 : ++this.indexPrevReady;
             this.indexPrev = this.indexPrev >= this.imgNumber - 1 ? 0 : ++this.indexPrev;
             this.indexCurrent = this.indexCurrent >= this.imgNumber - 1 ? 0 : ++this.indexCurrent;
             this.indexNext = this.indexNext >= this.imgNumber - 1 ? 0 : ++this.indexNext;
             this.indexNextReady = this.indexNextReady >= this.imgNumber - 1 ? 0 : ++this.indexNextReady;
-        }else if(position === "prev") {
+        } else if (position === "prev") {
             this.indexPrevReady = this.indexPrevReady <= 0 ? this.imgNumber - 1 : --this.indexPrevReady;
             this.indexPrev = this.indexPrev <= 0 ? this.imgNumber - 1 : --this.indexPrev;
             this.indexCurrent = this.indexCurrent <= 0 ? this.imgNumber - 1 : --this.indexCurrent;
@@ -83,17 +86,17 @@ accordionCarousel.prototype = {
         this.switchPic();
     },
     switchByItem: function(event) {
-        let index = event.target.getAttribute("index");
-        if(!index){
+        var index = event.target.getAttribute("index");
+        if (!index) {
             return;
-        }else{
+        } else {
             this.indexCurrent = Number(index);
             this.indexPrevReady = this.indexCurrent - 2 < 0 ? this.imgNumber - (2 - this.indexCurrent) : this.indexCurrent - 2;
             this.indexPrev = this.indexCurrent - 1 < 0 ? this.imgNumber - 1 : this.indexCurrent - 1;
             this.indexNext = this.indexCurrent + 1 > this.imgNumber - 1 ? 0 : this.indexCurrent + 1;
             this.indexNextReady = this.indexCurrent + 2 > this.imgNumber - 1 ? (this.indexCurrent + 2) - this.imgNumber : this.indexCurrent + 2;
-    }
-    this.switchPic();
+        }
+        this.switchPic();
     },
     switchPic: function() {
         this.imgContainer[this.indexPrevReady].setAttribute("class", "img-item prev-img-ready");
@@ -107,8 +110,8 @@ accordionCarousel.prototype = {
         this.switchActivedItemColor();
     },
     switchActivedItemColor: function() {
-        this.switchContainer[this.indexLastActived].setAttribute("class","switch-item");
-        this.switchContainer[this.indexCurrent].setAttribute("class","switch-item item-actived");
+        this.switchContainer[this.indexLastActived].setAttribute("class", "switch-item");
+        this.switchContainer[this.indexCurrent].setAttribute("class", "switch-item item-actived");
         this.indexLastActived = this.indexCurrent;
     }
 }
