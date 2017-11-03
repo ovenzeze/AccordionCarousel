@@ -24,7 +24,7 @@ English version please read [README_EN.md](https://github.com/ovenzeze/Accordion
 # 1：最终要实现的效果—（V2）
 Github地址：[github.com/ovenzeze/AccordionCarousel](https://github.com/ovenzeze/AccordionCarousel)
 
-Demo地址：[http://urlc.cn/RCa7B2](http://123.206.204.163/AccordionCarousel/index.html)
+Demo地址：[http://clayz.top/carousel/index.html](http://clayz.top/carousel/index.html)
 # 2：使用方法
 **文件引入：**  
 
